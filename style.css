@@ -20,89 +20,107 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 900;
 }
 i {
     font-size: 5.5em;
 }
 .quote-container {
-    display: flex;
-     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; 
-    margin: 0 50px; */
-    border-radius: 15px;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    max-width: 900px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
     background-color: rgba(192, 151, 240, 0.6);
-    /* background-color: rgb(255, 255, 255,0.5); */
-    padding: 3rem;
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.5);
-    max-width: 1100px;
+    max-width: 700px;
     /* padding: 20px 30px; */
 }
 .quote-text {
-    font-family: 'Amatic SC', cursive;
-    text-align: center;
-    font-weight: 700;
-    font-weight:bold;
-    font-size: 4rem;
+  font-size: 2.75rem;
 }
+
 .long-quote {
-    font-size: 0.5rem;
+  font-size: 2rem;
 }
+
 .fa-quote-left {
-    font-size: 6rem;
-    margin-right: 10px;
+  font-size: 4rem;
 }
+
 .quote-author {
-    font-family: 'Amatic SC', cursive;
-    margin-top: 15px;
-    font-size: 2.5rem;
-    font-weight:400;
-    font-style: italic;
+  margin-top: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
 }
+
 .button-container {
-    margin: 15px     ;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
 }
+
 button {
-    cursor: pointer;
-    font-size: 1.125rem;
-    height: 2.25rem;
-    border: none;
-    border-radius: 10px;
-    color: #ffffff;
-    background: #333333;
-    outline: none;
-    padding: 0.5rem 1.8rem;
-    box-shadow: 0 0.3rem rgba(121,121,121, 0.65);
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #333;
+  outline: none;
+  padding: 0.5rem 1.8rem 0.5rem 1.8rem;
+  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
 }
+
 button:hover {
-    filter: brightness(110%);
+  filter: brightness(110%);
 }
+
 button:active {
-    transform: translate(0, 0.3rem);
-    box-shadow: 0 0.1rem rgba(255,255,255, 0.65);    
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
+
 .twitter-button:hover {
-    color: #38a1f3 ;
+  color: #38a1f3;
 }
+
 .fa-twitter {
-    font-size: 1.125rem;
+  font-size: 1.5rem;
 }
-/* Media Query: Tablet or smaller */
-@media  screen and (max-width:1000px) {
-    .quote-container {
-        margin: auto 10px;
-    }
-    .quote-text {
-        font-size: 2.5rem;
-    }
-    .fa-quote-left {
-        font-size: 4rem;
-    }
-    .quote-author {
-        font-size: 1.5rem;
-    }
+
+/* Loader */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #333;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Media Query: Tablet or Smaller */
+@media screen and (max-width: 600px) {
+  .quote-container {
+    margin: auto 10px;
+  }
+
+  .quote-text {
+    font-size: 2rem;
+  }
+
+  .quote-author {
+    font-size: 1.5rem;
+  }
+  #new-quote {
+    font-size: 0.7rem;
+  }
 }
